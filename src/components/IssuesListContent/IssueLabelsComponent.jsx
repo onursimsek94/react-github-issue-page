@@ -8,17 +8,16 @@ export default class IssueLabelsComponent extends React.Component {
     return (
       <span className='labels lh-default'>
         {
-          labels.map(label => {
-            return (
+          labels.map((label, i) => (
               <a
+                key={i}
                 href='javascript:void(0)'
                 className='d-inline-block IssueLabel v-align-text-top'
                 style={{backgroundColor: `#${label.color}`, color: '#000'}}
                 title={label.name}>
                 {label.name}
               </a>
-            )
-          })
+          ))
         }
       </span>
     )
