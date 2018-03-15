@@ -26,9 +26,9 @@ export default class IssuesFiltersPopupAuthor extends React.Component {
         data-filterable-for='author-filter-field'
         data-filterable-type='substring'>
         {
-          filteredAuthor.map(item => {
-            return (
+          filteredAuthor.map((item, i) => (
               <a
+                key={i}
                 href='javascript:void(0)'
                 className={`select-menu-item ${item.id === filters.selectedIssueAuthor ? 'selected' : ''}`}
                 onClick={this.changeSelectedIssueAuthor.bind(this, item.id)}>
@@ -48,8 +48,7 @@ export default class IssuesFiltersPopupAuthor extends React.Component {
                   <span className='description-inline'>{/*username*/}</span>
                 </div>
               </a>
-            )
-          })
+          ))
         }
       </div>
     )

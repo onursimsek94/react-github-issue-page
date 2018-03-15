@@ -39,9 +39,10 @@ export default class IssuesFilters extends React.Component {
     return (
       <div className='table-list-header-toggle float-right'>
         {
-          filterTitles.map(title => {
-            return (
-              <div className='float-left select-menu'>
+          filterTitles.map((title, i) => (
+              <div
+                key={i}
+                className='float-left select-menu'>
                 <button
                   className='btn-link select-menu-button'
                   type='button'
@@ -61,8 +62,7 @@ export default class IssuesFilters extends React.Component {
                       closePopupFn={this.closeFilterPopup.bind(this)} />
                 }
               </div>
-            )
-          })
+          ))
         }
       </div>
     )
