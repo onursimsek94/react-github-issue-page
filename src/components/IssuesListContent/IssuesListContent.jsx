@@ -28,9 +28,9 @@ export default class IssuesListContent extends React.Component {
         <ul>
 
           {
-            issues.map(issue => {
-              return (
+            issues.map((issue, i) => (
                 <li
+                  key={i}
                   id={`issue_${issue.number}`}
                   className='Box-row Box-row--focus-gray p-0 read issue-list-item'
                   data-id={issue.id}>
@@ -60,8 +60,7 @@ export default class IssuesListContent extends React.Component {
 
                   </div>
                 </li>
-              )
-            })
+            ))
           }
 
         </ul>

@@ -26,9 +26,9 @@ export default class IssuesFiltersPopupLabels extends React.Component {
         data-filterable-for='author-filter-field'
         data-filterable-type='substring'>
         {
-          filteredLabels.map(item => {
-            return (
+          filteredLabels.map((item, i) => (
               <a
+                key={i}
                 href='javascript:void(0)'
                 className={`select-menu-item label-select-menu-item ${filters.selectedIssueLabels.includes(item.id) ? 'selected' : ''}`}
                 onClick={this.changeSelectedIssueLabels.bind(this, item.id)}>
@@ -48,8 +48,7 @@ export default class IssuesFiltersPopupLabels extends React.Component {
                   </div>
                 </div>
               </a>
-            )
-          })
+          ))
         }
       </div>
     )
