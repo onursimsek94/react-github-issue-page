@@ -6,7 +6,6 @@ import GithubIssues from 'Containers/GithubIssues'
 import store from './store'
 
 require('../node_modules/bootstrap/dist/css/bootstrap.min.css')
-/* require('../node_modules/primer/build/build.css') */
 require('./style.css')
 
 ReactDom.render(
